@@ -1,0 +1,14 @@
+# Flask
+# tensorflow
+# tensorflow==2.18.0
+# opencv-python
+# numpy
+# matplotlib
+# tflite-runtime @ file://./tflite_runtime-2.14.0-cp310-cp310-manylinux2014_x86_64.whl
+
+
+Flask
+numpy<2
+Pillow
+opencv-python
+opencv-contrib-python # 提供 OpenCV 高階模組（如 LBPH 人臉辨識器）

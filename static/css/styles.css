@@ -1,0 +1,195 @@
+html, body {
+    overflow-y: auto; /* 僅允許垂直滾動 */
+    height: auto; /* 允許內容自適應高度 */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D0CBCB; /* 灰灰淺淺的底色 */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #007bff; /* 標題顏色 */
+    text-align: center;
+}
+
+.header {
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #e6f4f1; /* 柔和的淺綠色背景 */
+    border: 1px solid #d4e7e4; /* 邊框顏色稍深一點 */
+    border-radius: 10px; /* 圓角 */
+    max-width: 600px; /* 最大寬度 */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加陰影讓框更柔和 */
+}
+
+.header h1 {
+    color: #333; /* 黑字 */
+    font-size: 2rem;
+    font-weight: bold; /* 粗體 */
+    margin-bottom: 1rem;
+}
+
+.header p {
+    color: #555; /* 深灰文字顏色 */
+    font-size: 1.1rem;
+}
+
+.btn-container {
+    margin-top: 2rem;
+}
+
+.btn {
+    min-width: 200px;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+form {
+    background: white;
+    padding: 30px; /* 增加內部邊距 */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
+    max-width: 500px; /* 增加寬度限制 */
+    margin: 20px auto; /* 讓表單居中 */
+    text-align: center; /* 表單內容居中 */
+}
+
+input[type="file"] {
+    font-size: 1.2rem; /* 增加字體大小 */
+    margin-bottom: 20px; /* 增加底部間距 */
+}
+
+input[type="submit"] {
+    font-size: 1.2rem; /* 增加字體大小 */
+    padding: 10px 25px; /* 調整按鈕大小 */
+    background-color: #007bff; /* 改為與標題一致的藍色 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* 改為深藍色 */
+}
+
+.button {
+    display: inline-block;                      /* 使按鈕為行內區塊 */
+    padding: 10px 20px;                         /* 按鈕內邊距 */
+    margin: 10px 5px;                           /* 按鈕外邊距 */
+    border: none;                               /* 無邊框 */
+    border-radius: 5px;                         /* 圓角 */
+    background-color: #007bff;                /* 按鈕背景色 */
+    color: white;                             /* 文字顏色 */
+    text-align: center;                         /* 文字置中 */
+    text-decoration: none;                      /* 無下劃線 */
+    font-size: 16px;                            /* 字體大小 */
+    transition: background-color 0.3s ease;     /* 背景色變化效果 */
+}
+
+.button:hover {
+    background-color: #0056b3;                /* 滑鼠懸停時變色 */
+}
+
+.uploaded-image {
+    max-width: 300px;                           /* 設定最大寬度 */
+    height: auto;                               /* 自動高度以保持比例 */
+    display: block;                             /* 設置為區塊以便於居中對齊 */
+    margin: 20px auto;                          /* 上下邊距 20px，左右自動居中 */
+    border-radius: 5px;                         /* 圓角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+}
+
+.dialog {                                       /* 對話框的樣式 */
+    display: none;                              /* 默認隱藏 */
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;                         /* 背景顏色 */
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 10px;                        /* 圓角 */
+    max-width: 400px;                           /* 最大寬度 */
+    width: 90%;                                 /* 寬度 */
+}
+ 
+.dialog .close {                                /* 關閉按鈕樣式 */
+    cursor: pointer;
+    color: #fff;
+    background: #ff4d4d;                      /* 關閉按鈕顏色 */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;                         /* 圓角 */
+    position: absolute;                         /* 位置絕對 */
+    right: 10px;                                /* 右側距離 */
+    top: 10px;                                  /* 上方距離 */
+}
+
+#dialog-message {                               /* 對話框內的訊息樣式 */
+    margin-top: 30px;                           /* 上方距離 */
+    color: #333;                              /* 文字顏色 */
+}
+
+.overlay {                                      /* 遮罩層樣式 */
+    display: none;                              /* 默認隱藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);           /* 半透明背景 */
+    z-index: 999;                               /* 在對話框下方 */
+}
+
+.container {
+    margin-top: 20px;
+    padding-bottom: 40px; /* 增加底部間距，避免內容被按鈕遮擋 */
+    max-width: 1200px; /* 控制最大寬度 */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+#preview {
+    display: block; /* 確保為區塊元素 */
+    margin: 20px auto; /* 上下間距 20px，左右自動居中 */
+    max-width: 300px; /* 限制圖片最大寬度 */
+    max-height: 300px; /* 限制圖片最大高度 */
+    object-fit: contain; /* 保持比例 */
+    border: 1px solid #ddd; /* 添加邊框 */
+    border-radius: 10px; /* 圓角 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+}

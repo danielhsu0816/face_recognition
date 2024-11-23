@@ -1,0 +1,109 @@
+/* Reset body styles */
+html, body {
+    overflow-y: auto; /* 僅允許垂直滾動 */
+    scroll-behavior: smooth; /* 平滑滾動 */
+    font-family: Arial, sans-serif;
+    background-color: #D0CBCB; /* 背景顏色 */
+    color: #333; /* 預設文字顏色 */
+}
+
+/* Container for video content */
+.container {
+    margin-top: 20px; /* 頂部間距 */
+    padding-bottom: 40px; /* 底部間距，避免按鈕被遮擋 */
+    max-width: 1200px; /* 最大寬度 */
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+/* Title and description styles */
+.container h1 {
+    color: #007bff; /* 標題顏色 */
+    margin-bottom: 10px;
+}
+
+.container p {
+    font-size: 1.2rem; /* 增加字體大小 */
+    margin-bottom: 20px; /* 增加文字與內容的距離 */
+    color: #555; /* 深灰色 */
+}
+
+/* Video Container Styles */
+.video-container {
+    display: flex;
+    flex-wrap: wrap; /* 允許換行 */
+    justify-content: space-between; /* 均分間距 */
+    gap: 20px; /* 框框之間的距離 */
+    margin-top: 20px; /* 與標題文字分開 */
+}
+
+/* Individual video box styles */
+.video-box {
+    flex: 1 1 calc(50% - 20px); /* 每行顯示兩個框，間距為 20px */
+    max-width: calc(50% - 20px); /* 最大寬度為 50% 減去間距 */
+    height: 45vh; /* 高度為視窗高度的 45% */
+    max-height: 500px; /* 限制框的最大高度 */
+    margin-bottom: 20px; /* 每個框的底部間距 */
+    background-color: #f9f9f9; /* 背景顏色 */
+    border: 1px solid #ddd; /* 邊框顏色 */
+    border-radius: 10px; /* 圓角 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+    text-align: center;
+    padding: 10px; /* 框內邊距 */
+}
+
+/* Video streams (real-time and binary) */
+.video-stream {
+    width: 100%; /* 填滿框寬度 */
+    height: 100%; /* 填滿框高度 */
+    object-fit: cover; /* 保持比例，並裁剪影像以適應框 */
+    border-radius: 10px; /* 圓角保持一致 */
+}
+
+/* Canvas or video for processing */
+.video-box canvas,
+.video-box video {
+    width: 100%; /* 填滿框寬度 */
+    height: 100%; /* 填滿框高度 */
+    object-fit: cover; /* 保持比例，並裁剪影像 */
+    border-radius: 10px; /* 圓角保持一致 */
+}
+
+/* Image styles (for screenshots) */
+.video-box img {
+    width: 100%; /* 填滿框寬度 */
+    height: auto; /* 自適應高度 */
+    max-height: 500px; /* 限制圖片的最大高度 */
+    object-fit: cover; /* 保持比例，並裁剪影像 */
+    margin: auto; /* 圖片居中對齊 */
+}
+
+/* Headings within video boxes */
+.video-box h5 {
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem; /* 適中標題大小 */
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}

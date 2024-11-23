@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client-Side Video Feed</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/video_styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Real-Time Video Feed</h1>
+        <p>顯示即時影像、二值化影像，以及截圖後的處理結果。</p>
+
+        <video id="real-time-video" autoplay playsinline class="video-stream" style="display: none;"></video>
+
+        <!-- 即時影像顯示 -->
+        <div class="row mt-4">
+            <div class="col-md-6 video-box">
+                <h5>即時影像（人臉與情緒偵測）</h5>
+                <canvas id="real-time-canvas" class="video-stream"></canvas>
+            </div>
+            <div class="col-md-6 video-box">
+                <h5>即時二值化影像</h5>
+                <canvas id="binary-video" class="video-stream"></canvas>
+            </div>
+        </div>
+
+        <!-- 截圖結果顯示 -->
+        <div class="row mt-4">
+            <div class="col-md-6 video-box">
+                <h5>截圖 - 原始影像</h5>
+                <img id="captured-original" alt="Captured Original Image" class="video-stream">
+            </div>
+            <div class="col-md-6 video-box">
+                <h5>截圖 - 二值化影像</h5>
+                <img id="captured-binary" alt="Captured Binary Image" class="video-stream">
+            </div>
+        </div>
+
+        <!-- 按鈕 -->
+        <div class="text-center mt-4">
+            <button id="capture" class="btn btn-primary">捕捉畫面</button>
+            <a href="/" class="btn btn-secondary">返回首頁</a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/camera_capture.js') }}"></script>
+</body>
+</html>
